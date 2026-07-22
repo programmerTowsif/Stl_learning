@@ -50,4 +50,50 @@ for(auto x:v){
         return 0;
     }
 }
-cout<<"not found"; }
+cout<<"not found";
+
+
+int n;
+cin>>n;
+vector<int>v(n);
+for(int i =0;i<n;i++) cin>>v[i];
+sort(v.begin(),v.end());
+
+
+vector<pair<int,int>>freq;
+int cnt =1;
+for(int i=1;i<n;i++){
+    if(v[i] ==v[i-1]) cnt++;
+    else {
+        freq.push_back({v[i-1],cnt});
+        cnt=1;
+    }
+}
+freq.push_back({v[n-1],cnt});
+for(auto x:freq)
+cout<<x.first<<" "<<x.second<<endl;
+pair<int,int> p;
+
+p.first
+p.second
+
+pair<int,int> p = {10,20};
+
+make_pair(10,20);
+
+swap(p1,p2);
+
+if(p1 == p2)
+if(p1 != p2)
+if(p1 > p2)
+if(p1 < p2)
+
+vector<pair<int,int>> v;
+
+sort(v.begin(),v.end());
+
+sort(v.rbegin(),v.rend());
+
+v.push_back({a,b});
+ 
+}
