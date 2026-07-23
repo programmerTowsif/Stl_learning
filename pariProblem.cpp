@@ -97,3 +97,41 @@ sort(v.rbegin(),v.rend());
 v.push_back({a,b});
  
 }
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	vector<pair<int,int>>arr;
+	arr.push_back({3, 5});
+    arr.push_back({10, 2});
+    arr.push_back({7, 8});
+    arr.push_back({1, 1});
+    arr.push_back({6, 9});
+    int maxSum = INT_MIN;
+    pair<int,int>maxPair;
+    for(int i=0;i<arr.size();i++){
+        int currentSum = arr[i].first+arr[i].second;
+        if(currentSum>maxSum){
+            maxSum = currentSum;
+            maxPair = arr[i];
+        }
+    }
+    cout<<" max sum "<<maxSum<<" first "<<maxPair.first<<" second "<<maxPair.second<<endl;
+}
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+ 
+ vector<pair<int,string>>students;
+  students.push_back({78,"rafi"});
+  students.push_back({92,"nustrat"});
+    students.push_back({44,"Tanvir"});
+    students.push_back({ 88,"Sadia"});
+    sort(students.begin(),students.end());
+ cout<<"Topper the "<<students[students.size()-1].second<<" "<<students[students.size()-1].first<<endl;
+}
+
