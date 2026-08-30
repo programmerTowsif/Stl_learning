@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App UI</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f5f7fb;
+            font-family: Arial, sans-serif;
+        }
+
+        .todo-wrapper {
+            max-width: 650px;
+            margin: 70px auto;
+        }
+
+        .todo-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .todo-header {
+            background: #4f46e5;
+            color: white;
+            padding: 30px;
+        }
+
+        .todo-header h2 {
+            font-weight: 700;
+        }
+
+        .add-todo {
+            margin-top: 25px;
+        }
+
+        .add-todo .form-control {
+            height: 48px;
+            border: none;
+            border-radius: 8px 0 0 8px;
+        }
+
+        .add-todo .btn {
+            border-radius: 0 8px 8px 0;
+            padding: 0 25px;
+        }
+
+        .todo-body {
+            padding: 25px;
+        }
+
+        .filter-btns {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .filter-btns .btn {
+            border-radius: 20px;
+            padding: 6px 18px;
+        }
+
+        .todo-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            margin-bottom: 12px;
+            background: #f8f9ff;
+            border: 1px solid #eee;
+            border-radius: 10px;
+        }
+
+        .todo-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .todo-left input {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .todo-text {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .completed .todo-text {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 6px;
+        }
+
+        .action-buttons button {
+            width: 36px;
+            height: 36px;
+            border: none;
+            border-radius: 7px;
+        }
+
+        .edit-btn {
+            background: #e0e7ff;
+            color: #4f46e5;
+        }
+
+        .delete-btn {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+
+        .todo-footer {
+            border-top: 1px solid #eee;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="todo-wrapper">
+
+        <div class="todo-card">
+
+            <!-- Header -->
+            <div class="todo-header">
+                <h2 class="mb-1">My Todo List</h2>
+                <p class="mb-0 opacity-75">Stay organized and get things done.</p>
+
+                <div class="input-group add-todo">
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="What needs to be done?"
+                    >
+                    <button class="btn btn-light text-primary fw-semibold">
+                        Add
+                    </button>
+                </div>
+            </div>
+
+            <!-- Body -->
+            <div class="todo-body">
+
+                <!-- Filters -->
+                <div class="filter-btns">
+                    <button class="btn btn-primary">All</button>
+                    <button class="btn btn-outline-secondary">Active</button>
+                    <button class="btn btn-outline-secondary">Completed</button>
+                </div>
+
+                <!-- Todo 1 -->
+                <div class="todo-item">
+                    <div class="todo-left">
+                        <input type="checkbox">
+                        <span class="todo-text">Learn Bootstrap</span>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="edit-btn">✏️</button>
+                        <button class="delete-btn">🗑️</button>
+                    </div>
+                </div>
+
+                <!-- Todo 2 -->
+                <div class="todo-item completed">
+                    <div class="todo-left">
+                        <input type="checkbox" checked>
+                        <span class="todo-text">Create Todo UI</span>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="edit-btn">✏️</button>
+                        <button class="delete-btn">🗑️</button>
+                    </div>
+                </div>
+
+                <!-- Todo 3 -->
+                <div class="todo-item">
+                    <div class="todo-left">
+                        <input type="checkbox">
+                        <span class="todo-text">Practice HTML & CSS</span>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="edit-btn">✏️</button>
+                        <button class="delete-btn">🗑️</button>
+                    </div>
+                </div>
+
+                <!-- Todo 4 -->
+                <div class="todo-item">
+                    <div class="todo-left">
+                        <input type="checkbox">
+                        <span class="todo-text">Build a portfolio website</span>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="edit-btn">✏️</button>
+                        <button class="delete-btn">🗑️</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="todo-footer">
+                <span>3 items left</span>
+                <span>Clear completed</span>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
